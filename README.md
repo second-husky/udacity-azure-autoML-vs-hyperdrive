@@ -7,13 +7,23 @@ This model is then compared to an Azure AutoML run.
 
 ## Summary
 **In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+This dataset contains data about bank marketing target customer characteristics. 
+We seek to predict if a custermer is willing to subscribe to a term deposit with the bank.  
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
+The best performing logistic regression model was using C=0.962 as the regularization strength determining parameter and with 150 max iterations, which gave a prediction accuracy of 0.914.
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
+In the pipeline, the data was ingested, cleaned and then fed into a logistic regression model for training.
+Data was first ingested from an online csv file and then cleaned by one hot encoding of categorical variables.
+Then logistic regression models were trained using the cleaned data and optimized by tuning parameter C and max_iter.
+Parameter C was uniformly sampled in the space of 0.5-1.5
+Max_iter was sampled from a integer list [50, 100, 150, 200]
+The best model was then selected based on accuracy as the primary metric.
 
-**What are the benefits of the parameter sampler you chose?**
+**What are the benefits of the parameter sampler you chose?*
+
 
 **What are the benefits of the early stopping policy you chose?**
 
@@ -25,7 +35,3 @@ This model is then compared to an Azure AutoML run.
 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
-
-## Proof of cluster clean up
-**If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
-**Image of cluster marked for deletion**
