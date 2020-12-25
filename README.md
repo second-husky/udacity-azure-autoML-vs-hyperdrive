@@ -7,10 +7,12 @@ This model is then compared to an Azure AutoML run.
 
 ## Summary
 **In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+
 This dataset contains data about bank marketing target customer characteristics. 
 We seek to predict if a custermer is willing to subscribe to a term deposit with the bank.  
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
+
 The best performing logistic regression model was using C=0.962 as the regularization strength determining parameter and with 150 max iterations, which gave a prediction accuracy of 0.914.
 
 ## Scikit-learn Pipeline
